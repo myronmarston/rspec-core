@@ -1,5 +1,6 @@
 require 'rspec/core/kernel_extensions'
 require 'rspec/core/object_extensions'
+require 'rspec/core/module_extensions'
 require 'rspec/core/load_path'
 require 'rspec/core/deprecation'
 require 'rspec/core/reporter'
