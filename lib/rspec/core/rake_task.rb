@@ -93,12 +93,12 @@ module RSpec
                             cmd_parts.unshift bundler
                             cmd_parts += files_to_run.map { |fn| %["#{fn}"] }
                             cmd_parts << spec_opts.join(" ")
-                            cmd_parts.join(" ")
+                            cmd_parts.join(" ").gsub(/ +/, ' ')
                           end
       end
 
       def runner
-        rcov ? rcov_path : RUBY
+        rcov ? rcov_path : ''
       end
 
       def runner_options
